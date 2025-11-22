@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: collabstudy-backend
+    env: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 5001
+
+  - type: web
+    name: collabstudy-frontend
+    env: node
+    buildCommand: npm install && npm install serve && npm run build
+    startCommand: ./node_modules/.bin/serve -s build
+    envVars:
+      - key: REACT_APP_API_URL
+        value: https://collabstudy-backend.onrender.com
+      - key: PORT
+        value: 3000 

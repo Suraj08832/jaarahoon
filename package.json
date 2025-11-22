@@ -1,0 +1,67 @@
+{
+  "name": "coolabstudy",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@daily-co/daily-js": "^0.85.0",
+    "@daily-co/daily-react": "^0.24.0",
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@mui/icons-material": "^7.0.1",
+    "@mui/material": "^7.0.1",
+    "@testing-library/dom": "^10.4.0",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.3.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/jest": "^27.5.2",
+    "@types/node": "^16.18.126",
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.1",
+    "axios": "^1.8.4",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "http-proxy-middleware": "^3.0.5",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-router-dom": "^7.5.0",
+    "react-scripts": "5.0.1",
+    "serve": "^14.2.1",
+    "socket.io": "^4.8.1",
+    "socket.io-client": "^4.8.1",
+    "typescript": "^4.9.5",
+    "web-vitals": "^2.1.4",
+    "zustand": "^5.0.8"
+  },
+  "scripts": {
+    "start": "concurrently \"node server.js\" \"BROWSER=none PORT=5000 HOST=0.0.0.0 WDS_SOCKET_PORT=0 DANGEROUSLY_DISABLE_HOST_CHECK=true react-scripts start\"",
+    "dev": "concurrently \"nodemon server.js\" \"BROWSER=none PORT=5000 HOST=0.0.0.0 WDS_SOCKET_PORT=0 DANGEROUSLY_DISABLE_HOST_CHECK=true react-scripts start\"",
+    "server": "node server.js",
+    "client": "BROWSER=none PORT=5000 HOST=0.0.0.0 WDS_SOCKET_PORT=0 DANGEROUSLY_DISABLE_HOST_CHECK=true react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "nodemon": "^3.1.10"
+  }
+}
